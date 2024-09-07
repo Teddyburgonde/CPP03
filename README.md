@@ -47,6 +47,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 rhs coter droit de legal 
 Fixed& Fixed::operator=(const Fixed& rhs)
 
+a = b;
+La valeur du coter droit du = va aller dans a
+
 
 
 
