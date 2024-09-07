@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:50:59 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/07 12:54:44 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/07 13:50:34 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,36 +28,15 @@ class ClapTrap
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
+    void    setAttackDamage(int damage);
 
 	private:
 	std::string _name;
 	int			_hitPoints;
 	int			_energyPoints;
 	int			_attackDamage;
+
+    friend std::ostream& operator<<(std::ostream& os, const ClapTrap& clapTrap);
 };
 
 #endif
-
-
-/* public:
-        ClapTrap();
-        ClapTrap(std::string name);
-        ClapTrap(const ClapTrap &copy);
-        ~ClapTrap();
-        ClapTrap &operator=(const ClapTrap &copy);
-        void    attack(std::string const & target);
-        void    takeDamage(unsigned int amount);
-        void    beRepaired(unsigned int amount);
-        void    setName(std::string name);
-        std::string getName(void);
-        void    setHitPoints(int hitPoints);
-        int     getHitPoints(void);
-        void    setEnergyPoints(int energyPoints);
-        int     getEnergyPoints(void);
-        void    setAttackDamage(int attackDamage);
-        int     getAttackDamage(void);
-    private:
-        std::string _name;
-        int         _hitPoints;
-        int         _energyPoints;
-        int         _attackDamage; */
