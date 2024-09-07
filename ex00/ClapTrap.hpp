@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:50:59 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/06 14:21:23 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/07 12:54:44 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ClapTrap
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap& copy);
 	~ClapTrap();
-	ClapTrap &operator=(const ClapTrap& copy);
+	ClapTrap &operator=(const ClapTrap& rhs);
 
 	public:
 	void	attack(const std::string& target);
@@ -37,10 +37,6 @@ class ClapTrap
 };
 
 #endif
-
-
-
-
 
 
 /* public:

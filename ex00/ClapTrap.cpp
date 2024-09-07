@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 12:52:34 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/06 15:55:38 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/07 12:56:37 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,15 @@ ClapTrap::ClapTrap() :_name(""), _hitPoints(10), _energyPoints(10), _attackDamag
     std::cout << "Default ClapTrap constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& copy)
-{
-    
-}
-
-// constructor par copie 
-
-
-
-
-
-
 ClapTrap::ClapTrap(std::string name) :_name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
     std::cout << "ClapTrap " << name << " created!" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& copy)
+{
+    std::cout << "ClapTrap copy constructor called" << std::endl;
+    *this = copy;
 }
 
 ClapTrap::~ClapTrap()
@@ -39,31 +33,25 @@ ClapTrap::~ClapTrap()
     std::cout << "ClapTrap " << _name << " destroyed!" << std::endl;
 }
 
-
-// Overloaded Operators 
-// copie les valeurs des variables de Claptrap dans un autre objet ClapTrap 
-
-
-
-
-
-void	ClapTrap::attack(const std::string& target)
+ClapTrap &ClapTrap::operator=(const ClapTrap& rhs)
 {
-    if (_hitPoints && _energyPoints > 0)
-    {
-        std::cout << "ClapTrap " << _name << " attacks " << target << ", causing "
-        <<_attackDamage << " points of domage!" <<std::endl;
-        _energyPoints-= 10;
-    }
-    else
-    {
-        std::cout << "ClapTrap " << _name << " has not enough hit points or energy points to attack!" << std::endl;
-    }
+    std::cout << "ClapTrap assignation operator called" << std::endl;
+    _name = rhs._name;
+    _hitPoints = rhs._hitPoints;
+    _energyPoints = rhs._energyPoints;
+    _attackDamage = rhs._attackDamage;
+    return (*this);
 }
 
-void	ClapTrap::takeDamage(unsigned int amount)
+void ClapTrap::attack(const std::string& target)
+{
+    std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
 {
     std::cout << "ClapTrap " << _name << " takes " << amount << " points of damage!" << std::endl;
     _hitPoints -= amount;
-    
 }
+
+// function beRepaired 
