@@ -26,29 +26,37 @@ protected : Accessible dans la classe où il est déclaré et dans les classes d
 Cela permet aux classes dérivées d'hériter et de modifier les attributs protected.
 ```
 
-Parce que vous ne pouvez jamais avoir assez de ClapTraps, vous allez maintenant créer un robot dérivé. Il sera nommé ScavTrap et héritera des constructeurs et du destructeur de ClapTrap. Cependant, ses constructeurs, son destructeur et sa fonction attack() afficheront des messages différents. Après tout, les ClapTraps sont conscients de leur individualité.
+**EX02**
 
-Notez que la construction et la destruction appropriées doivent être démontrées dans vos tests. Lorsqu'un ScavTrap est créé, le programme commence par construire un ClapTrap. La destruction se fait dans l'ordre inverse. Pourquoi ?
+- implémentez une classe FragTrap qui hérite de ClapTrap. 
 
-ScavTrap utilisera les attributs de ClapTrap (mettez à jour ClapTrap en conséquence) et devra les initialiser comme suit :
 
-    Nom, qui est passé en paramètre au constructeur
-    Points de vie (100), représentant la santé du ClapTrap
-    Points d'énergie (50)
-    Dégâts d'attaque (20)
 
-ScavTrap aura également sa propre capacité spéciale :
 
-void guardGate();
 
-Cette fonction membre affichera un message informant que le ScavTrap est maintenant en mode Gardien de la Porte.
 
-N'oubliez pas d'ajouter davantage de tests à votre programme.
+
+
+
+
+
+Elle est très similaire à ScavTrap. Cependant, ses messages de construction et de destruction doivent être différents. La construction et la destruction en chaîne doivent être correctement visibles dans vos tests. Lorsqu'un FragTrap est créé, le programme doit d'abord construire un ClapTrap. La destruction se fait dans l'ordre inverse. Les mêmes principes s'appliquent pour les attributs, mais avec des valeurs différentes cette fois-ci :
+
+    Nom, qui est passé en paramètre au constructeur.
+    Points de vie (100), représentant la santé du ClapTrap.
+    Points d'énergie (100).
+    Dégâts d'attaque (30).
+
+
+FragTrap a aussi une capacité spéciale :
+void highFivesGuys(void);
+
+Cette fonction membre affiche une demande de high-five positive sur la sortie standard. Encore une fois, ajoutez plus de tests à votre programme.
 
 
 Vendredi : 
  CPP03 ex00 ✅
- CPP03 ex01 ❌
+ CPP03 ex01 ✅
  CPP03 ex02 ❌
 
 Samedi :
