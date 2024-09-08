@@ -13,6 +13,7 @@ CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 #================== SOURCES =================#
 
 SRCS =	ClapTrap.cpp \
+		ScavTrap.cpp \
 		main.cpp 
 
 #============== OBJECT FILES ================#
