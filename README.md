@@ -9,11 +9,22 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 
 **EX01**
 
-Tu dois créer une nouvelle classe ScavTrap qui hérite de ClapTrap. Cette classe aura ses propres constructeurs, destructeur et méthodes, tout en utilisant les attributs hérités de ClapTrap mais avec des valeurs initiales différentes. Elle aura également une méthode spéciale, guardGate().
+- Cree une nouvelle class ScavTrap qui herite de ClapTrap.
+- Cette classe aura ses propres constructeurs, destructeur et méthodes, tout en utilisant les attributs hérités de ClapTrap mais avec des valeurs initiales différentes. 
+- Cree la methode guardGate().
 
 N'oublie pas de bien gérer l'héritage des constructeurs et du destructeur pour montrer la construction et la destruction appropriées dans tes tests.
 
 
+**Difference entre private et protected**
+
+```c
+private : Accessible uniquement dans la classe où il est déclaré. 
+Non accessible dans les classes dérivées.
+
+protected : Accessible dans la classe où il est déclaré et dans les classes dérivées. 
+Cela permet aux classes dérivées d'hériter et de modifier les attributs protected.
+```
 
 Parce que vous ne pouvez jamais avoir assez de ClapTraps, vous allez maintenant créer un robot dérivé. Il sera nommé ScavTrap et héritera des constructeurs et du destructeur de ClapTrap. Cependant, ses constructeurs, son destructeur et sa fonction attack() afficheront des messages différents. Après tout, les ClapTraps sont conscients de leur individualité.
 

@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:50:59 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/07 14:57:58 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/08 09:57:10 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ClapTrap
 	void	beRepaired(unsigned int amount);
     void    setAttackDamage(int damage);
 
-	private:
+	protected:
 	std::string _name;
 	int			_hitPoints;
 	int			_energyPoints;
