@@ -29,35 +29,21 @@ Cela permet aux classes dérivées d'hériter et de modifier les attributs prote
 **EX02**
 
 - implémentez une classe FragTrap qui hérite de ClapTrap. 
-
-
-
-
-
-
-
-
-
-
-
-Elle est très similaire à ScavTrap. Cependant, ses messages de construction et de destruction doivent être différents. La construction et la destruction en chaîne doivent être correctement visibles dans vos tests. Lorsqu'un FragTrap est créé, le programme doit d'abord construire un ClapTrap. La destruction se fait dans l'ordre inverse. Les mêmes principes s'appliquent pour les attributs, mais avec des valeurs différentes cette fois-ci :
+- Lorsqu'un FragTrap est créé, le programme doit d'abord construire un ClapTrap. 
+- La destruction se fait dans l'ordre inverse. Les mêmes principes s'appliquent pour les attributs, mais avec des valeurs différentes cette fois-ci :
 
     Nom, qui est passé en paramètre au constructeur.
     Points de vie (100), représentant la santé du ClapTrap.
     Points d'énergie (100).
     Dégâts d'attaque (30).
-
-
-FragTrap a aussi une capacité spéciale :
+- FragTrap a aussi une capacité spéciale :
 void highFivesGuys(void);
-
-Cette fonction membre affiche une demande de high-five positive sur la sortie standard. Encore une fois, ajoutez plus de tests à votre programme.
 
 
 Vendredi : 
  CPP03 ex00 ✅
  CPP03 ex01 ✅
- CPP03 ex02 ❌
+ CPP03 ex02 ✅
 
 Samedi :
  Correction CPP03 ❌

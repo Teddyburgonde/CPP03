@@ -3,49 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:51:59 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/08 14:54:33 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/08 18:32:35 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_H
 # define FRAGTRAP_H
 
-#include <iostream>
+#include "ClapTrap.hpp"
 
-class FragTrap
+class FragTrap : public ClapTrap
 {
     public:
     FragTrap();
-    ~FragTrap();
     FragTrap(std::string name);
-    FragTrap(FragTrap const & src);
-    FragTrap & operator=(FragTrap const & src);
+    FragTrap(const FragTrap& copy);
+    ~FragTrap();
+    FragTrap &operator=(const FragTrap& rhs);
     
+    public:
     void    highFivesGuys(void);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 #endif

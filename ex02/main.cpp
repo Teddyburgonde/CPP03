@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 12:49:15 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/08 11:34:38 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/08 18:26:34 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
@@ -58,5 +59,30 @@ int main()
     c.guardGate();
     d.guardGate();
     std::cout << std::endl;
-    return (0);   
+    
+    std::cout << "------------------------" << std::endl;
+    FragTrap e("Eddy");
+    FragTrap f("Fabrice");
+    int damage3 = 500;
+    
+    e.setAttackDamage(damage3);
+    f.setAttackDamage(damage3);
+    std::cout << std::endl;
+    std::cout << "Les valeurs de " << e << std::endl;
+    std::cout << "Les valeurs de " << f << std::endl;
+    std::cout << std::endl;
+    e.attack("Fabrice");
+    f.takeDamage(damage3);
+    std::cout << "Les valeurs de " << f << std::endl;
+    std::cout << std::endl;
+    f.beRepaired(5);
+    std::cout << std::endl;
+    std::cout << "Les valeurs de " << e << std::endl;
+    std::cout << "Les valeurs de " << f << std::endl;
+    std::cout << std::endl;
+    e.highFivesGuys();
+    f.highFivesGuys();
+    std::cout << std::endl;
+    return (0);
+
 }
