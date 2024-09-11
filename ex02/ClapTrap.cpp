@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 12:52:34 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/07 13:57:49 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/11 09:12:28 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,33 @@ void ClapTrap::beRepaired(unsigned int amount)
     std::cout << "It now has " << _hitPoints << " hit points and " << _energyPoints << " energy points left." << std::endl;
 }
 
+
+std::string ClapTrap::getName() const
+{
+    return _name;
+}
+
+int ClapTrap::getHitPoints() const
+{
+    return _hitPoints;
+}
+
+int ClapTrap::getEnergyPoints() const
+{
+    return _energyPoints;
+}
+
+int ClapTrap::getAttackDamage() const
+{
+    return _attackDamage;
+}
+
 std::ostream& operator<<(std::ostream& os, const ClapTrap& clapTrap)
 {
-    os << clapTrap._name
-       << " : Hit Points: " << clapTrap._hitPoints
-       << " | Energy Points: " << clapTrap._energyPoints
-       << " | Attack Damage: " << clapTrap._attackDamage;
+    os << clapTrap.getName()
+       << " : Hit Points: " << clapTrap.getHitPoints()
+       << " | Energy Points: " << clapTrap.getEnergyPoints()
+       << " | Attack Damage: " << clapTrap.getAttackDamage();
     return os;
 }
 

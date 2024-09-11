@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:54:46 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/08 18:21:36 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/10 08:49:46 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ FragTrap &FragTrap::operator=(const FragTrap& rhs)
     std::cout << "FragTrap assignation operator called" << std::endl;
     if (this != &rhs)
     {
-        // ClapTrap::operator=(rhs); 
         this->_name = rhs._name;
         this->_hitPoints = rhs._hitPoints;
         this->_energyPoints = rhs._energyPoints;

@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:50:59 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/07 13:50:34 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/11 08:51:10 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,20 @@ class ClapTrap
 	void	beRepaired(unsigned int amount);
     void    setAttackDamage(int damage);
 
+	public:
+	std::string getName() const;
+    int getHitPoints() const;
+    int getEnergyPoints() const;
+    int getAttackDamage() const;
+
 	private:
 	std::string _name;
 	int			_hitPoints;
 	int			_energyPoints;
 	int			_attackDamage;
 
-    friend std::ostream& operator<<(std::ostream& os, const ClapTrap& clapTrap);
 };
+
+std::ostream& operator<<(std::ostream& os, const ClapTrap& clapTrap);
 
 #endif
