@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 15:00:32 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/08 11:22:29 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/13 09:15:07 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,8 @@ void ScavTrap::guardGate()
     }
 }
 
+void ScavTrap::attack(const std::string& target)
+{
+    std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!, it hurts!" << std::endl;
+    _energyPoints--;
+}

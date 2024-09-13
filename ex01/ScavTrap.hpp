@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:58:15 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/08 10:55:20 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/13 09:12:07 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ScavTrap : public ClapTrap
 	ScavTrap &operator=(const ScavTrap& rhs);
 	
 	public:
+	void attack(const std::string &target);
 	void guardGate();
 
 	private:
