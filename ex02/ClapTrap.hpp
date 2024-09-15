@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:50:59 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/11 09:12:54 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/14 16:29:42 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class ClapTrap
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-    void    setAttackDamage(int damage);
 
 	public:
 	std::string getName() const;
